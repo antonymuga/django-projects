@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Rover Club </title>
+	</head>
+	<body>
+		<h1> Here are our Patreons </h1>
+		<ol>
+			{% for patroniser in mypatrons %}
+			<li><a href="details/{{ patroniser.id }}">{{ patroniser.fname}} {{ patroniser.lname }}</a></li>
+			{% endfor %}
+		</ol>
+	</body>
+</html>

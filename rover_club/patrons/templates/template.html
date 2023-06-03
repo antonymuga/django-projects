@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		{% with usernickname="Antony Fireblade" %}
+		<h1>{{ usernickname }}</h1>
+		{% endwith %}
+		
+		<h2> Your favorite car is: {{favorite_car}}</h2>
+		<p>In range.py great stuff will happen</p>
+		<ol>
+			{% for patroniser in mypatrons %}
+			<li style='color:{% cycle 'red' 'blue' 'green' 'purple' 'pink' %}'> {{ patroniser.fname }} </li>
+			{% endfor %}
+		</ol>
+		<p></p>
+		<ol>
+			{% for patroniser in mypatrons reversed %}
+			{% if patroniser.mobile == NULL and patroniser.start_date == NULL %}								<h2> {{ patroniser.fname }} has incomplete details </h2>
+			{% endif %}
+			{% endfor %}
+		</ol>
+		{% comment "This is just some random comment that I wrote" %}
+			<h1> Hello and welcome to pride </h1>
+		{% endcomment %}
+	</body>
+</html

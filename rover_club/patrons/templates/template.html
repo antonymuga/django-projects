@@ -15,12 +15,13 @@
 		<p></p>
 		<ol>
 			{% for patroniser in mypatrons reversed %}
-			{% if patroniser.mobile == NULL and patroniser.start_date == NULL %}								<h2> {{ patroniser.fname }} has incomplete details </h2>
+			{% if patroniser.mobile == NULL and patroniser.start_date == NULL %}								<h2> {{ patroniser.fname }} has incomplete details {# This actually worked #} </h2>
 			{% endif %}
 			{% endfor %}
 		</ol>
 		{% comment "This is just some random comment that I wrote" %}
 			<h1> Hello and welcome to pride </h1>
 		{% endcomment %}
+		{% include 'web-details.html' with me="Jack" sponsor="JLR Group" %}
 	</body>
 </html

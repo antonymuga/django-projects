@@ -25,7 +25,7 @@ def main(request):
     return HttpResponse(template.render())
 
 def testing(request):
-    mypatrons = Patron.objects.all().values()
+    mypatrons = Patron.objects.values_list('fname')
     template = loader.get_template('template.html')
     context = {
             'mypatrons': mypatrons,

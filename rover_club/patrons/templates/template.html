@@ -1,23 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		{% with usernickname="Antony Fireblade" %}
-		<h1>{{ usernickname }}</h1>
-		{% endwith %}
-
-		<table>
-		<tr>
-			<th>ID</th>
-			<th>Firstname</th>
-			<th>Lastname</th>
-		</tr>
-		{% for pat in mypatrons %}
-		<tr>
-			<td>{{ pat.id }} </td>
-			<td> {{ pat.fname }} </td>
-			<td> {{ pat.lname }} </td>
-		</tr>
-		{% endfor %}
-		</table>
+		<ul>
+			<li> {{ mypatrons }} </li>
+		</ul>
 	</body>
 </html
